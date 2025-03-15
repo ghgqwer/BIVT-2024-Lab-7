@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab7/lab6.csproj": {}
+    "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab6/lab6.csproj": {}
   },
   "projects": {
-    "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab7/lab6.csproj": {
+    "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab6/lab6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab7/lab6.csproj",
+        "projectUniqueName": "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab6/lab6.csproj",
         "projectName": "lab6",
-        "projectPath": "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab7/lab6.csproj",
+        "projectPath": "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab6/lab6.csproj",
         "packagesPath": "/Users/vadim/.nuget/packages/",
-        "outputPath": "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab7/obj/",
+        "outputPath": "/Users/vadim/Desktop/c# labs/BIVT-2024-Lab-7/lab6/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vadim/.nuget/NuGet/NuGet.Config"
