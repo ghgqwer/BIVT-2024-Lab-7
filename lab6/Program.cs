@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Lab_7
 {
     internal class Program
     {        
 
-    static void Main(string[] args){
+
+        // static void Main(string[] args){
         // //        Purple_1.Participant[] participants1 = new Purple_1.Participant[]
         // // {
         // //     new Purple_1.Participant("Иван", "Иванов"),
@@ -197,9 +199,7 @@ namespace Lab_7
 
         // }
 
-
-}
-
-
     }
 }
+
+    

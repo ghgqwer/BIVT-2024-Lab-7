@@ -13,7 +13,6 @@ namespace Lab_7{
             private int[,] _marks;
             private int _jumpCount;
 
-            private double _totalScore;
             public string Name => _name;
             public string Surname => _surname;
             public double[] Coefs{
@@ -75,6 +74,7 @@ namespace Lab_7{
                 _surname = surname;
                 _coefs = new double[4]{2.5, 2.5, 2.5, 2.5};
                 _marks = new int[4,7];   
+                _jumpCount = 0;
             }
             
             public void SetCriterias(double[] coefs){
@@ -198,28 +198,30 @@ namespace Lab_7{
         public class Competition{
             private Judge[] _judges;
             private Participant[] _participants;
+            public Judge[] Judges => _judges;
+            public Participant[] Participants => _participants;
 
-            public Judge[] Judges{
-                get{
-                    if (_judges == null || _judges.Length == 0){
-                        return null;
-                    }
-                    Judge[] Copy = new Judge[_judges.Length];
-                    Array.Copy(Copy, _judges, _judges.Length);
-                    return Copy;
-                }
-            }
+            // public Judge[] Judges{
+            //     get{
+            //         if (_judges == null || _judges.Length == 0){
+            //             return null;
+            //         }
+            //         Judge[] Copy = new Judge[_judges.Length];
+            //         Array.Copy(Copy, _judges, _judges.Length);
+            //         return Copy;
+            //     }
+            // }
 
-            public Participant[] Participants{
-                get{
-                    if (_participants == null || _participants.Length == 0){
-                        return null;
-                    }
-                    Participant[] Copy = new Participant[_participants.Length];
-                    Array.Copy(Copy, _participants, _participants.Length);
-                    return Copy;
-                }
-            }
+            // public Participant[] Participants{
+            //     get{
+            //         if (_participants == null || _participants.Length == 0){
+            //             return null;
+            //         }
+            //         Participant[] Copy = new Participant[_participants.Length];
+            //         Array.Copy(Copy, _participants, _participants.Length);
+            //         return Copy;
+            //     }
+            // }
 
             public Competition(Judge[] judges){
                 if (judges == null || judges.Length == 0 || judges.Length != 7){

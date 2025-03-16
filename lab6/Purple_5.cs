@@ -113,6 +113,8 @@ namespace Lab_7{
                     //     System.Console.Write(member+" ");
                     // }
 
+
+                    // Листнуть вниз там та же логика с моими комментами
                     string[] uniqueAnswers = new string[answerCount];
                     int[] counts = new int[answerCount];
                     int uniqueCount = 0;
@@ -124,13 +126,13 @@ namespace Lab_7{
                         {
                             if (ans[i] == uniqueAnswers[j])
                             {
-                                counts[j]++;
+                                counts[j]++; // если находим на j месте такой то просто в списке количества на этом же месте ++
                                 found = true;
                                 break;
                             }
                         }
 
-                        if (!found)
+                        if (!found) //если не нашли в уникальных ответах новое поле + в количествах новое поле = 1 и теперь количество уникальных на 1 больше
                         {
                             uniqueAnswers[uniqueCount] = ans[i];
                             counts[uniqueCount] = 1;
@@ -147,7 +149,7 @@ namespace Lab_7{
                     for (int i = 1; i < uniqueCount; i++){
                         int k = i, j = k - 1;
                         while (j >= 0){
-                            if (counts[j] < counts[k]){ // не сказано по какому принципу сортируются варианты с одинаковым кол-вом ответов
+                            if (counts[j] < counts[k]){ 
                                 string tempAnswer = uniqueAnswers[k];
                                 uniqueAnswers[k] = uniqueAnswers[j];
                                 uniqueAnswers[j] = tempAnswer;

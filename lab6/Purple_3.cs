@@ -159,16 +159,17 @@ namespace Lab_7{
             private Participant[] _participants;
             protected double[] _moods;
             private int _participant_index;
-            public Participant[] Participants{
-                get{
-                    if (_participants == null){
-                        return null;
-                    }
-                    Participant[] Copy = new Participant[_participants.Length];
-                    Array.Copy(_participants, Copy, _participants.Length);
-                    return Copy;
-                }
-            }
+            public Participant[] Participants => _participants;
+            // public Participant[] Participants{
+            //     get{
+            //         if (_participants == null){
+            //             return null;
+            //         }
+            //         Participant[] Copy = new Participant[_participants.Length];
+            //         Array.Copy(_participants, Copy, _participants.Length);
+            //         return Copy;
+            //     }
+            // }
 
             public double[] Moods{
                 get{
@@ -184,7 +185,7 @@ namespace Lab_7{
             protected abstract void ModificateMood();
 
             public Skating(double[] moods){
-                if (moods == null){
+                if (moods == null || moods.Length != 7){
                     return;
                 }
                 _moods = moods;

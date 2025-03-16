@@ -165,16 +165,17 @@ namespace Lab_7{
 
         public string Name => _name;
         public int Standard => _standard;
-        public Participant[] Participants{
-            get{
-                if (_participants == null){
-                    return null;
-                }
-                Participant[] Copy = new Participant[_participants.Length];
-                Array.Copy(_participants, Copy, _participants.Length);
-                return Copy;
-            }
-        }
+        public Participant[] Participants => _participants;
+        // public Participant[] Participants{
+        //     get{
+        //         if (_participants == null){
+        //             return null;
+        //         }
+        //         Participant[] Copy = new Participant[_participants.Length];
+        //         Array.Copy(_participants, Copy, _participants.Length);
+        //         return Copy;
+        //     }
+        // }
         public SkiJumping(string name, int standard){
             _name = name;
             _standard = standard;

@@ -128,21 +128,24 @@ namespace Lab_7{
             }
 
             public void Sort(){
-                if (_sportsmen == null) return;
-
-                for (int i = 1; i < _sportsmen.Length; i++){
-                    int k = i, j = k - 1;
-                    while (j >= 0){
-                        if (_sportsmen[j].Time > _sportsmen[k].Time){
-                            Sportsman tmp = _sportsmen[j];
-                            _sportsmen[j] = _sportsmen[k];
-                            _sportsmen[k] = tmp;
-                        }
-                        k = j;
-                        j--;
-                    }
-                }
+                Sportsman.Sort(_sportsmen);
             }
+            // public void Sort(){
+            //     if (_sportsmen == null) return;
+
+            //     for (int i = 1; i < _sportsmen.Length; i++){
+            //         int k = i, j = k - 1;
+            //         while (j >= 0){
+            //             if (_sportsmen[j].Time > _sportsmen[k].Time){
+            //                 Sportsman tmp = _sportsmen[j];
+            //                 _sportsmen[j] = _sportsmen[k];
+            //                 _sportsmen[k] = tmp;
+            //             }
+            //             k = j;
+            //             j--;
+            //         }
+            //     }
+            // }
 
             public void Split(out Sportsman[] men, out Sportsman[] women){
                 int men_count = 0;
