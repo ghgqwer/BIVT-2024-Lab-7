@@ -138,7 +138,7 @@ namespace Lab_7{
             }
 
             public static void Sort(Participant[] array){
-                if (array == null) return;
+                if (array == null || array.Length < 2) return;
                 
                 for (int i = 1; i < array.Length; i++){
                     int k = i, j = k - 1;
@@ -167,7 +167,7 @@ namespace Lab_7{
         public string Name => _name;
 
         public Judge(string name, int[] marks){
-            if (marks == null){
+            if (marks == null || _marks == null){
                 return;
             }
             _name = name;
@@ -262,7 +262,7 @@ namespace Lab_7{
             }
 
             public void Add(Participant[] participants){
-                if (participants == null || participants.Length == 0){
+                if (participants == null || participants.Length == 0 || _participants == null){
                     return;
                 }
                 Participant[] New = new Participant[_participants.Length + participants.Length];
