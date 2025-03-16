@@ -226,11 +226,12 @@ namespace Lab_7{
 
             public Competition(Judge[] judges){
                 if (judges == null || judges.Length == 0 || judges.Length != 7){
-                    return;
+                    Judge[] _judges = new Judge[7];
                 }
-                _judges = new Judge[judges.Length];
-                Array.Copy(judges, _judges, judges.Length);
-
+                else{
+                    _judges = new Judge[judges.Length];
+                    Array.Copy(judges, _judges, judges.Length);
+                }
                 _participants = new Participant[0];
             }
 

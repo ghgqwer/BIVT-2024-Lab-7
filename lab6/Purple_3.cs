@@ -186,9 +186,11 @@ namespace Lab_7{
 
             public Skating(double[] moods){
                 if (moods == null || moods.Length != 7){
-                    return;
+                    _moods = new double[7];
                 }
-                _moods = moods;
+                else{
+                    _moods = moods;
+                }
                 ModificateMood();
                 _participant_index = 0;
                 _participants = new Participant[0];
@@ -258,7 +260,7 @@ namespace Lab_7{
             }
         }
         
-                public static void PrintArray(int[] array)
+        public static void PrintArray(int[] array)
         {
             if (array == null || array.Length == 0)
                 return;
