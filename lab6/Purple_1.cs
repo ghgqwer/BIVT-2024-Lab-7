@@ -167,14 +167,15 @@ namespace Lab_7{
         public string Name => _name;
 
         public Judge(string name, int[] marks){
-            if (marks == null || _marks == null){
-                return;
+            if (marks == null){
+                _marks = new int[0];
+            }
+            else{
+                _marks = new int[marks.Length];
+                Array.Copy(marks, _marks, marks.Length);
             }
             _name = name;
-            _marks = new int[marks.Length];
-            Array.Copy(marks, _marks, marks.Length);
             _mark_index = 0;
-
         }
 
         public int CreateMark(){

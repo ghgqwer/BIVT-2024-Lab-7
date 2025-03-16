@@ -302,6 +302,10 @@ namespace Lab_7{
                 return generalReport;
             }
 
+            public void Print(){
+
+            }
+
             // public (string, double)[] GetGeneralReport(int question){
             //     if (question < 1 || question > 3 || _researches == null || _researches.Length == 0){
             //         return null;
@@ -365,6 +369,15 @@ namespace Lab_7{
 
             //     return result;
             // }
+            
+            public static void PrintArray(Research[] array)
+        {
+            if (array == null || array.Length == 0)
+                return;
+            for (int i = 0; i < array.Length; i++)
+                Console.WriteLine($"{array[i].Name}");
+            Console.WriteLine();
+        }
         
         }
     }

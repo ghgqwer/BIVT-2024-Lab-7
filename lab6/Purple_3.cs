@@ -225,7 +225,12 @@ namespace Lab_7{
                     New[_participants.Length + i] = participants[i];
                 }
                 _participants = New;
-            }            
+            }   
+
+            public void Print(){
+                PrintArray(_participants);
+                PrintArray(_moods);
+            }         
         }
 
         public class FigureSkating: Skating{
@@ -253,6 +258,33 @@ namespace Lab_7{
             }
         }
         
+                public static void PrintArray(int[] array)
+        {
+            if (array == null || array.Length == 0)
+                return;
+            for (int i = 0; i < array.Length; i++)
+                Console.Write($"{array[i]} ");
+            Console.WriteLine();
+        }
+
+        public static void PrintArray(double[] array)
+        {
+            if (array == null || array.Length == 0)
+                return;
+            for (int i = 0; i < array.Length; i++)
+                Console.Write($"{array[i]} ");
+            Console.WriteLine();
+        }
+
+        public static void PrintArray(Participant[] array)
+        {
+            if (array == null || array.Length == 0)
+                return;
+            for (int i = 0; i < array.Length; i++)
+                Console.Write($"{array[i].Score} ");
+            Console.WriteLine();
+        }
+    
 
     }
 }

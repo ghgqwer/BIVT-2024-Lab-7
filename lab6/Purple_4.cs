@@ -245,10 +245,13 @@ namespace Lab_7{
                 return newGroup;
             }
 
-            public void Print(){}
+            public void Print(){
+                System.Console.WriteLine(_name);
+                PrintArray(_sportsmen);
+            }
         }
 
-                public static void PrintArray(int[] array)
+        public static void PrintArray(int[] array)
         {
             if (array == null || array.Length == 0)
                 return;
