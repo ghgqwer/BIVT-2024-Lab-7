@@ -52,12 +52,19 @@ namespace Lab_7{
                             grades[judje] = _marks[jump, judje];
                         }
 
+                        Array.Sort(grades); 
                         double sum = 0;
-                        for (int i = 0; i < grades.Length; i++){
+                        for (int i = 1; i < grades.Length - 1; i++) { 
                             sum += grades[i];
                         }
-                        sum = sum - grades.Max() - grades.Min();
                         total += sum * _coefs[jump];
+                                                
+                        // double sum = 0;
+                        // for (int i = 0; i < grades.Length; i++){
+                        //     sum += grades[i];
+                        // }
+                        // sum = sum - grades.Max() - grades.Min();
+                        // total += sum * _coefs[jump];
                     }
                     return total;
                 }
@@ -77,23 +84,35 @@ namespace Lab_7{
             }
 
             public void Jump(int[] marks){
-                if (marks == null || _marks == null) return;
+                if (marks == null || _marks == null || marks.Length < 7) return;
 
                 if (_jumpCount >= 4){
                     return;
                 }
 
-                if (marks.Length > 7){
-                    for (int j = 0; j < 7; j++){
-                    _marks[_jumpCount, j] = marks[j];
-                }
-                }
-                else{
-                    for (int j = 0; j < marks.Length; j++){
-                        _marks[_jumpCount, j] = marks[j];
+                for (int i = 0; i < marks.Length; i++){
+                    if (marks[i] < 1 || marks[i] > 6){
+                        return;
                     }
                 }
+
+                for (int i = 0; i < marks.Length; i++){
+                    _marks[_jumpCount, i] = marks[i];
+                }
+
                 _jumpCount++;
+
+                // if (marks.Length > 7){
+                //     for (int j = 0; j < 7; j++){
+                //     _marks[_jumpCount, j] = marks[j];
+                // }
+                // }
+                // else{
+                //     for (int j = 0; j < marks.Length; j++){
+                //         _marks[_jumpCount, j] = marks[j];
+                //     }
+                // }
+                
 
                 // if (_jumpCount == 4){
                 //     double total = 0;
@@ -213,15 +232,18 @@ namespace Lab_7{
             }
 
             public void Evaluate(Participant jumper){
-                if (jumper == null || _judges == null){
+                if (jumper == null || _judges == null || _judges.Length != 7){
                     return;
                 }
                 int[] marks = new int[_judges.Length];
                 int markInd = 0;
+        
                 for (int i = 0; i < _judges.Length; i++){
+                    if (markInd >= 7){
+                        break;
+                    }
                     if (_judges[i] != null){
-                        marks[markInd] = _judges[i].CreateMark();
-                        markInd++;
+                        marks[markInd++] = _judges[i].CreateMark();
                     }
                 }
 
