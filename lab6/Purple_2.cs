@@ -113,7 +113,7 @@ namespace Lab_7{
                     }
                 }
 
-                _result += 60 + (_distance - target) * 2;
+                _result += deafultPoints + (_distance - target) * extraPoints;
 
                 if (_result < 0) _result = 0;
 
