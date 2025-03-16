@@ -104,6 +104,8 @@ namespace Lab_7{
                         minI = i;
                     }
                 }
+
+                _result = 0;
                 
                 for (int i = 0; i < _marks.Length; i++){
                     if (i != maxI && i != minI){
@@ -111,7 +113,7 @@ namespace Lab_7{
                     }
                 }
 
-                _result += deafultPoints + (_distance - target) * extraPoints;
+                _result += 60 + (_distance - target) * 2;
 
                 if (_result < 0) _result = 0;
 
